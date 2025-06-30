@@ -1,0 +1,16 @@
+{
+  "name": "westports-voice-demo",
+  "version": "1.0.0",
+  "description": "Westports AI Voice Agent Demo with Ultravox and Twilio",
+  "main": "call_demo.js",
+  "scripts": {
+    "start": "node call_demo.js",
+    "demo": "node call_demo.js"
+  },
+  "dependencies": {
+    "twilio": "^4.20.0"
+  },
+  "keywords": ["westports", "ultravox", "twilio", "ai", "voice"],
+  "author": "Westports AI Team",
+  "license": "MIT"
+}
