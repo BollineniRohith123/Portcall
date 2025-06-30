@@ -62,8 +62,8 @@ GREETING: "Hello, this is Aisha from Westports Document Center. I have live acce
 Remember: You are a LIVE system agent with real database access. Always use your tools to provide current, accurate information!
 `;
 
-// Get backend URL from environment or use localhost for demo
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8001';
+// Get backend URL from environment or use the external URL for Ultravox
+const BACKEND_URL = 'https://0796086f-31e6-4512-b74d-a8a43b1bdc46.preview.emergentagent.com';
 
 const ULTRAVOX_CALL_CONFIG = {
     systemPrompt: WESTPORTS_SYSTEM_PROMPT,
