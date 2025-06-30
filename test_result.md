@@ -217,6 +217,8 @@ test_plan:
     - "Container Management API with MongoDB Integration"
     - "WebSocket Real-time Communication"
     - "Ultravox Tool Endpoints"
+    - "Real-time Dashboard with WebSocket Integration"
+    - "Live Voice Activity Tracking"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
@@ -226,3 +228,5 @@ agent_communication:
       message: "Implemented complete Westports AI Voice Agent system with backend container management, real-time WebSocket communication, comprehensive frontend dashboard, and Ultravox/Twilio integration. All core components are ready for testing. Backend needs testing first to verify all API endpoints and database operations work correctly before proceeding to frontend testing."
     - agent: "testing"
       message: "Completed testing of all backend components. All API endpoints are working correctly, including container management, WebSocket endpoint, and all Ultravox tool endpoints. The MongoDB integration is functioning properly with data persistence. All tests pass with proper validation and error handling. The backend is ready for frontend integration testing."
+    - agent: "testing"
+      message: "Completed testing of frontend components. The dashboard layout and UI components are working correctly, displaying all required information including container data, status badges, and activity sections. All sample containers (ABCD1234567, EFGH9876543, MSKU7654321) are displayed with correct details. The dashboard is responsive and works well on different screen sizes. There is an issue with the WebSocket connection - while the UI shows 'Connected', the actual connection fails due to incorrect URL formation in App.js. Despite this, the dashboard loads initial data correctly and provides a good user experience. The Live Voice Activity tracking UI is implemented correctly but real-time updates may be affected by the WebSocket issue."
