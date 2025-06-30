@@ -8,7 +8,7 @@ const CONFIG = {
         accountSid: 'ACa1e5c1c73ffa3ed3b6560ae7f0e1a413',
         authToken: 'ef4ab3a2b146100219c4a339750aac3b',
         phoneNumber: '+15076691592',
-        destinationNumber: '+917981040722' // Demo number provided
+        destinationNumber: '+917981040722' // Updated demo number
     },
     ultravox: {
         apiKey: 'NbrolDNo.IzQOz3BA5QdtuvfsfNYBCYdv3BwULk11',
