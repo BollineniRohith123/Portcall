@@ -30,16 +30,19 @@ const WestportsVoiceDashboard = () => {
 
         newSocket.onopen = () => {
             setConnectionStatus('Connected');
-            console.log('Connected to Westports backend');
+            setWebsocketErrors(0);
+            console.log('Connected to Westports backend WebSocket');
         };
 
         newSocket.onclose = () => {
             setConnectionStatus('Disconnected');
+            console.log('WebSocket connection closed');
         };
 
         newSocket.onerror = (error) => {
             console.error('WebSocket error:', error);
             setConnectionStatus('Error');
+            setWebsocketErrors(prev => prev + 1);
         };
 
         // Fetch initial dashboard data
