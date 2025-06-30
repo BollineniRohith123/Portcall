@@ -10,6 +10,8 @@ const WestportsVoiceDashboard = () => {
     const [recentActivities, setRecentActivities] = useState([]);
     const [socket, setSocket] = useState(null);
     const [connectionStatus, setConnectionStatus] = useState('Connecting...');
+    const [lastUpdate, setLastUpdate] = useState(null);
+    const [websocketErrors, setWebsocketErrors] = useState(0);
 
     const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8001';
 
