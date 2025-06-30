@@ -194,8 +194,18 @@ const WestportsVoiceDashboard = () => {
                 <span className={`connection-status ${connectionStatus === 'Connected' ? 'connected' : 'disconnected'}`}>
                     ● {connectionStatus}
                 </span>
+                {lastUpdate && (
+                    <div className="last-update">
+                        Last Update: {new Date(lastUpdate).toLocaleTimeString()}
+                    </div>
+                )}
                 <h1>Westports Container Management System</h1>
                 <p>Real-time voice AI integration with ETP, OPUS, CBAS, and WSS systems</p>
+                {websocketErrors > 0 && (
+                    <div className="websocket-debug">
+                        WebSocket Status: {connectionStatus} (Errors: {websocketErrors})
+                    </div>
+                )}
             </div>
 
             {/* Call Instructions */}
