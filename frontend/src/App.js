@@ -51,6 +51,8 @@ const WestportsVoiceDashboard = () => {
         // Listen for real-time updates
         newSocket.onmessage = (event) => {
             const data = JSON.parse(event.data);
+            setLastUpdate(new Date().toISOString());
+            console.log('Received WebSocket message:', data);
             handleRealtimeUpdate(data);
         };
 
