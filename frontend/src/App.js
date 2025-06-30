@@ -15,7 +15,14 @@ const WestportsVoiceDashboard = () => {
 
     useEffect(() => {
         // Initialize WebSocket connection
-        const wsUrl = backendUrl.replace('http', 'ws') + '/ws';
+        let wsUrl;
+        if (backendUrl.includes('https://')) {
+            wsUrl = backendUrl.replace('https://', 'wss://') + '/ws';
+        } else {
+            wsUrl = backendUrl.replace('http://', 'ws://') + '/ws';
+        }
+        
+        console.log('Connecting to WebSocket:', wsUrl);
         const newSocket = new WebSocket(wsUrl);
         setSocket(newSocket);
 
